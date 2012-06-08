@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level>
+
+    <global>
+        <items>
+            <item>
+                <id>
+                    hp10
+                </id>
+
+                <name>
+                    Health potion - 10hp
+                </name>
+
+                <value>
+                    10
+                </value>
+
+                <type>
+                    potion
+                </type>
+            </item>
+        </items>
+
+        <player>
+            <name>
+                Main Character
+            </name>
+
+            <health>
+                100
+            </health>
+
+            <items>
+                <item>
+                    <stored>
+                        false
+                    </stored>
+
+                    <type>
+                        weapon
+                    </type>
+
+                    <value>
+                        5
+                    </value>
+
+                    <name>
+                        sword
+                    </name>
+                </item>
+            </items>
+        </player>
+    </global>
+
+    <room>
+        <id>
+            centerRoom
+        </id>
+
+        <name>
+            Entrance
+        </name>
+
+        <startRoom>
+            true
+        </startRoom>
+
+        <npc>
+            <name>
+				Butler
+            </name>
+
+            <message>
+                Please make yourself comfortable.
+            </message>
+        </npc>
+        <npc>
+            <name>
+                Guard Dog
+            </name>
+
+            <message>
+				Bark! Bark!
+            </message>
+
+            <canFight>
+                true
+            </canFight>
+
+            <health>
+                 10
+            </health>
+
+            <items>
+                <item>
+                    <stored>
+                        false
+                    </stored>
+
+                    <name>
+                        dog collar
+                    </name>
+
+                    <value>
+                        0.05
+                    </value>
+
+                    <type>
+                        armor
+                    </type>
+                </item>
+                <item>
+                    <stored>
+                        false
+                    </stored>
+
+                    <name>
+                        dog paw
+                    </name>
+
+                    <value>
+                        2.5
+                    </value>
+
+                    <type>
+                        weapon
+                    </type>
+                </item>
+                <item>
+                    <globalId>
+                        hp10
+                    </globalId>
+                </item>
+            </items>
+        </npc>
+
+        <rooms>
+            <link>
+                <id>
+                    eastRoom
+                </id>
+            </link>
+            <link>
+                <id>
+                    southRoom
+                </id>
+            </link>
+            <link>
+                <id>
+                    westRoom
+                </id>
+            </link>
+            <link>
+                <id>
+                    northRoom
+                </id>
+
+                <hidden>
+                    true
+                </hidden>
+            </link>
+        </rooms>
+    </room>
+    <room>
+        <id>
+            eastRoom
+        </id>
+
+        <name>
+            Garden
+        </name>
+
+        <npc>
+            <name>
+                Gardener
+            </name>
+
+            <message>
+                Stay our of the gardens!
+            </message>
+        </npc>
+
+        <rooms>
+            <link>
+                <id>
+                    centerRoom
+                </id>
+            </link>
+        </rooms>
+    </room>
+    <room>
+        <id>
+            southRoom
+        </id>
+
+        <name>
+            Vault
+        </name>
+
+        <npc>
+            <name>
+                Guard
+            </name>
+
+            <message>
+                Don't touch anything!
+            </message>
+        </npc>
+
+        <container>
+            <name>
+                Chest
+            </name>
+
+            <items>
+                <item>
+                    <globalId>
+                        hp10
+                    </globalId>
+                </item>
+                <item>
+                    <name>
+                        Good Sword
+                    </name>
+
+                    <type>
+                        weapon
+                    </type>
+
+                    <value>
+                        20
+                    </value>
+                </item>
+                <item>
+                    <name>
+                        Good Armor
+                    </name>
+
+                    <type>
+                        armor
+                    </type>
+
+                    <value>
+                        .5
+                    </value>
+                </item>
+            </items>
+        </container>
+
+        <rooms>
+            <link>
+                <id>
+                    centerRoom
+                </id>
+            </link>
+        </rooms>
+    </room>
+    <room>
+        <id>
+            westRoom
+        </id>
+        <name>
+            Kitchen
+        </name>
+        <npc>
+            <name>
+                Cook
+            </name>
+
+            <message>
+                Get out of the kitchen!!
+            </message>
+        </npc>
+
+        <rooms>
+            <link>
+                <id>
+                    centerRoom
+                </id>
+            </link>
+        </rooms>
+    </room>
+    <room>
+        <id>
+            northRoom
+        </id>
+
+        <name>
+            Cave
+        </name>
+
+        <npc>
+            <name>
+                Troll
+            </name>
+
+            <canFight>
+                true
+            </canFight>
+
+            <message>
+                .....
+            </message>
+
+            <health>
+                100
+            </health>
+
+            <items>
+                <item>
+                    <name>
+                        Club
+                    </name>
+
+                    <type>
+                        weapon
+                    </type>
+
+                    <value>
+                        10
+                    </value>
+
+                    <stored>
+                        false
+                    </stored>
+                </item>
+            </items>
+        </npc>
+
+        <rooms>
+            <link>
+                <id>
+                    centerRoom
+                </id>
+            </link>
+        </rooms>
+    </room>
+
+</level>
